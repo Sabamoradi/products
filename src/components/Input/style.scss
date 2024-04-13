@@ -1,0 +1,9 @@
+@use "src/styles/main.scss" as *;
+
+.container_input{
+    input{
+        border: toRem(1) solid;
+        border-radius: toRem(4);
+        padding: toRem(5);
+    }
+}

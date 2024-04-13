@@ -1,0 +1,5 @@
+@use "src/styles/main.scss" as *;
+
+.header_wrapper{
+    padding: toRem(10) toRem(20);
+}
