@@ -2,8 +2,10 @@
 
 .container_input{
     input{
-        border: toRem(1) solid;
         border-radius: toRem(4);
-        padding: toRem(5);
+        padding: toRem(10);
+        &:focus{
+            outline: none;
+        }
     }
 }
