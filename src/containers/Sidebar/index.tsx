@@ -5,10 +5,7 @@ async function getProductCategory() {
   try {
     const res = await fetch("https://dummyjson.com/products/categories");
     return res.json();
-    
-  } catch (error) {
-    
-  }
+  } catch (error) {}
 }
 
 export default async function Sidebar() {
@@ -16,8 +13,12 @@ export default async function Sidebar() {
 
   return (
     <div className="sidebar_container">
+      <Link href="/">
+        <p>All</p>
+      </Link>
+
       <ul>
-        {dataCategory.map((el: string,index:number) => {
+        {dataCategory.map((el: string, index: number) => {
           return (
             <li className="sidebar_item" key={`${index}-s`}>
               <Link href={`/products?cat=${el}`}>
