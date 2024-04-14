@@ -7,8 +7,15 @@
     float: right;
     width: 100%;
     height: toRem(70);
+    display: flex;
+    align-items: center;
     .w-50{
         width: 50%;
+    }
+    .header_btn{
+        border: 1px solid $primary;
+        padding: toRem(5);
+        border-radius: toRem(8);
     }
     
 }

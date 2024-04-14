@@ -8,7 +8,7 @@ interface Props{
 }
 
 
-async function getProductCategory(cat:string | null) {
+async function getProducts(cat:string | null) {
   
   try {
     const res = await fetch(`https://dummyjson.com/products/category/${cat}`);
@@ -21,7 +21,7 @@ async function getProductCategory(cat:string | null) {
 
 export default async function Products(props:Props) {
     const {params} = props
-    const dataCategory = await getProductCategory(params.category);
+    const dataCategory = await getProducts(params.category);
   console.log(dataCategory);
   
   return (

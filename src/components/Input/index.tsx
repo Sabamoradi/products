@@ -7,6 +7,7 @@ interface Props {
     placeholder: string;
     type: string;
     onClick?: () => void;
+    onChange: any;
 };
 
 function Input(props: Props) {
@@ -16,6 +17,7 @@ function Input(props: Props) {
         placeholder,
         inputClassName,
         onClick,
+        onChange
     } = props;
 
     return (
@@ -27,6 +29,7 @@ function Input(props: Props) {
                     placeholder={placeholder}
                     className={inputClassName}
                     onClick={onClick}
+                    onChange={(e)=> onChange(e.target.value)}
                 />
         </div>
     );
