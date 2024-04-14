@@ -26,6 +26,11 @@ const CustomPagination = (props: Props) => {
           <p>prev</p>
         )}
       </div>
+      <div className="page_item">
+          <span>
+            {(+skip /10) + 1}
+          </span>
+      </div>
       <div className={`action_item ${+total === (+skip) + 10 && "disable_btn"}`}>
         {+total === (+skip) + 10 ? (
           <p>next</p>
