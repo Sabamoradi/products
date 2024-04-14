@@ -1,0 +1,18 @@
+@use "src/styles/main.scss" as *;
+
+.pagination_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: toRem(20) 0;
+  cursor: pointer;
+  font-size: toRem(12);
+  .page_item{
+    padding: 0 toRem(10);
+  }
+  .action_item{
+   padding: toRem(10);
+    border: 1px solid #ccc;
+    border-radius: toRem(8);
+  }
+}
