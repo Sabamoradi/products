@@ -18,7 +18,7 @@ export default async function Main() {
   return (
     <>
       <ProductList products={data}/>
-      <CustomPagination />
+      {/* <CustomPagination /> */}
     </>
   );
 }

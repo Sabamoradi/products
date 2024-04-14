@@ -9,17 +9,25 @@ export const metadata: Metadata = {
   title: "products",
   description: "products app",
 };
+async function getProductCategory() {
+  try {
+    const res = await fetch("https://dummyjson.com/products/categories");
+    return res.json();
+  } catch (error) {}
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const dataCategory = await getProductCategory();
+
   return (
     <html lang="en">
       <body>
         <div className="conatiner">
-          <Sidebar />
+          <Sidebar categories={dataCategory} />
           <div className="right">
             <Header />
             <div className="content">{children}</div>

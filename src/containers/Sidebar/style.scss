@@ -3,6 +3,7 @@
 .sidebar_container{
     padding: toRem(10);
     border-right: 1px solid #e5e7eb;
+    background-color: $white;
     position: fixed;
     width: toRem(220);
     height: 100%;
@@ -17,4 +18,15 @@
             }
         }
     }
+}
+.show-btn{
+    display: none;
+    padding: toRem(20);
+    position: fixed;
+}
+.menu-line{
+    width: toRem(20);
+    height: toRem(2);
+    background-color: $black;
+    margin: toRem(2) 0;
 }
