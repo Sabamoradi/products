@@ -22,6 +22,7 @@ async function getProductCategory(cat:string | null) {
 export default async function Products(props:Props) {
     const {params} = props
     const dataCategory = await getProductCategory(params.category);
+  console.log(dataCategory);
   
   return (
     <>

@@ -11,9 +11,14 @@
     .sidebar_item{
         padding: toRem(10) 0;
         cursor: pointer;
+
         p{
             color: $black;
             &:hover{
+                color: $primary;
+            }
+
+            &.active_side{
                 color: $primary;
             }
         }

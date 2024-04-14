@@ -5,6 +5,11 @@
         width: 50%;
     }
   }
+  @media (min-width: 769px) {
+    .close-btn{
+        display: none;
+    }
+  }
 
   @media (max-width: 768px) {
     .item_cont{

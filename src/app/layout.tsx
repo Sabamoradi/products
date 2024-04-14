@@ -21,13 +21,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const dataCategory = await getProductCategory();
+  const categoryItem = await getProductCategory();
+  console.log(categoryItem);
+  
 
   return (
     <html lang="en">
       <body>
         <div className="conatiner">
-          <Sidebar categories={dataCategory} />
+          <Sidebar categories={categoryItem} />
           <div className="right">
             <Header />
             <div className="content">{children}</div>

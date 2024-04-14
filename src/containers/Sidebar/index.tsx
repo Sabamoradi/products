@@ -3,6 +3,8 @@
 import { useState } from "react";
 import "./style.scss";
 import Link from "next/link";
+import { useParams } from 'next/navigation';
+
 
 interface Props {
   categories: string[];
@@ -10,6 +12,9 @@ interface Props {
 export default function Sidebar(props: Props) {
   const { categories } = props;
   const [openMenu, setOpenMenu] = useState(false);
+  const { category } = useParams();
+  
+
   return (
     <>
       <button
@@ -33,8 +38,8 @@ export default function Sidebar(props: Props) {
           {categories?.map((el: string, index: number) => {
             return (
               <li className="sidebar_item" key={`${index}-s`}>
-                <Link href={`/products?cat=${el}`}>
-                  <p>{el}</p>
+                <Link href={`/${el}`}>
+                  <p className={`${category === el && 'active_side'}`}>{el}</p>
                 </Link>
               </li>
             );
