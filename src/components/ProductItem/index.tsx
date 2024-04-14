@@ -1,29 +1,39 @@
-"useClient";
+"use client";
+import { productItem } from "@/types/type";
 import "./style.scss";
 import Image from "next/image";
 
-const ProductItem = () => {
+
+interface Props{
+  item:productItem
+}
+
+const ProductItem = (props:Props) => {
+  const {item} = props
+  
   return (
     <div className="item_cont">
-<div className={"item_wrapper"}>
+     <div className={"item_wrapper"}>
       <div className="img_wrapper">
         <Image
-          src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+          src={item.thumbnail}
           width={500}
           height={500}
           alt="img"
         />
       </div>
       <div className="text_wrapper">
+        <div className="top_wrap">
         <div className="top">
-          <p className="title">name</p>
+          <p className="title">{item.title}</p>
           <div className="category">
-            <span>category name</span>
+            <span>{item.category}</span>
           </div>
         </div>
-        <p className="desc">An apple mobile which is nothing like apple</p>
+        <p className="desc">{item.description}</p>
+        </div>
         <div className="bottom">
-            <p className="price">6.56</p>
+            <p className="price">{item.price}$</p>
         </div>
       </div>
     </div>

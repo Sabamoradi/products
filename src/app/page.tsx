@@ -1,11 +1,24 @@
-import ProductItem from '@/components/ProductItem'
-import Image from 'next/image'
+import ProductItem from "@/components/ProductItem";
+import ProductList from "@/containers/ProductList";
+import { productItem } from "@/types/type";
 
-export default function Main() {
+
+async function getProductData() {
+  try {
+    const res = await fetch("https://dummyjson.com/products");
+    return res.json();
+    
+  } catch (error) {
+
+  }
+}
+
+export default async function Main() {
+  const data = await getProductData();
+
   return (
     <>
-      <ProductItem/>
-      <ProductItem/>
+      <ProductList products={data}/>
     </>
-  )
+  );
 }

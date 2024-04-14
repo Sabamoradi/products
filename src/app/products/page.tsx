@@ -1,9 +1,16 @@
-import Image from 'next/image'
+"use client"
+import { useSearchParams } from 'next/navigation'
+
 
 export default function Products() {
+  const searchParams = useSearchParams()
+
+  const search = searchParams.get('cat')
+  console.log(search);
+  
   return (
     <div>
-      aaaaa
+      {search}
     </div>
   )
 }

@@ -1,0 +1,7 @@
+@use "src/styles/main.scss" as *;
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
