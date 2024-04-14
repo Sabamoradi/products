@@ -1,0 +1,37 @@
+@use "src/styles/main.scss" as *;
+
+.item_cont {
+  margin-top: toRem(10);
+  width: 33%;
+  padding: 0 toRem(12);
+  .item_wrapper {
+    border-radius: 0 0 toRem(8) toRem(8);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    .text_wrapper {
+      padding: toRem(10);
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: toRem(10);
+        .title {
+          font-size: toRem(14);
+        }
+        .category {
+          background-color: #1e293b;
+          color: $white;
+          padding: toRem(5);
+          font-size: toRem(10);
+          border-radius: toRem(12);
+        }
+      }
+      .desc {
+        font-size: toRem(12);
+      }
+      .bottom {
+        padding-top: toRem(15);
+      }
+    }
+  }
+}

@@ -1,9 +1,11 @@
+import ProductItem from '@/components/ProductItem'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Main() {
   return (
-    <div>
-      salam
-    </div>
+    <>
+      <ProductItem/>
+      <ProductItem/>
+    </>
   )
 }
