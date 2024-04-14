@@ -2,9 +2,16 @@
 import CustomPagination from "@/components/Pagination";
 import ProductList from "@/containers/ProductList";
 
-async function getProductData() {
+
+interface Props{
+  searchParams:{
+    skip:string
+  }
+}
+
+async function getProductData(skip:string | null = "10") {
   try {
-    const res = await fetch("https://dummyjson.com/products?limit=10&skip=10");
+    const res = await fetch(`https://dummyjson.com/products?limit=10&skip=${skip}`);
     return res.json();
     
   } catch (error) {
@@ -12,13 +19,17 @@ async function getProductData() {
   }
 }
 
-export default async function Main() {
-  const data = await getProductData();
+export const revalidate = 0
+
+export default async function Main(props:Props) {
+  const {searchParams} = props
+  const data = await getProductData(searchParams?.skip);
+  
 
   return (
     <>
       <ProductList products={data}/>
-      {/* <CustomPagination /> */}
+      <CustomPagination total={data?.total} />
     </>
   );
 }

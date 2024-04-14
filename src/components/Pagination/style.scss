@@ -14,5 +14,13 @@
    padding: toRem(10);
     border: 1px solid #ccc;
     border-radius: toRem(8);
+    margin: 0 toRem(2);
+    &.disable_btn{
+      pointer-events: none;
+      p{
+        color: #ccc;
+      }
+
+    }
   }
 }

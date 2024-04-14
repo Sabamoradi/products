@@ -1,4 +1,11 @@
 import ProductList from "@/containers/ProductList";
+import {useParams} from 'next/navigation';
+
+interface Props{
+    params:{
+        category:string
+    }
+}
 
 
 async function getProductCategory(cat:string | null) {
@@ -12,8 +19,9 @@ async function getProductCategory(cat:string | null) {
   }
 }
 
-export default async function Products({searchParams }:any) {
-  const dataCategory = await getProductCategory(searchParams.cat);
+export default async function Products(props:Props) {
+    const {params} = props
+    const dataCategory = await getProductCategory(params.category);
   
   return (
     <>

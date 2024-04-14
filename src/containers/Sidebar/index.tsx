@@ -30,7 +30,7 @@ export default function Sidebar(props: Props) {
           <p>All</p>
         </Link>
         <ul>
-          {categories.map((el: string, index: number) => {
+          {categories?.map((el: string, index: number) => {
             return (
               <li className="sidebar_item" key={`${index}-s`}>
                 <Link href={`/products?cat=${el}`}>
