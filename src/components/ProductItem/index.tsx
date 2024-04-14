@@ -15,10 +15,8 @@ const ProductItem = (props:Props) => {
     <div className="item_cont">
      <div className={"item_wrapper"}>
       <div className="img_wrapper">
-        <Image
+        <img
           src={item.thumbnail}
-          width={500}
-          height={500}
           alt="img"
         />
       </div>

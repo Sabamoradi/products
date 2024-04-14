@@ -1,16 +1,25 @@
-"use client"
-import { useSearchParams } from 'next/navigation'
+import ProductList from "@/containers/ProductList";
 
 
-export default function Products() {
-  const searchParams = useSearchParams()
+async function getProductCategory(cat:string) {
+  try {
+    const res = await fetch(`https://dummyjson.com/products/category/${cat}`);
+    console.log(res);
+    
+    return res.json();
+    
+  } catch (error) {
+    
+  }
+}
 
-  const search = searchParams.get('cat')
-  console.log(search);
+export default async function Products({searchParams }:any) {
+  const dataCategory = await getProductCategory(searchParams.cat);
+  console.log(dataCategory);
   
   return (
-    <div>
-      {search}
-    </div>
-  )
+    <>
+        {/* <ProductList products={dataCategory} /> */}
+    </>
+  );
 }

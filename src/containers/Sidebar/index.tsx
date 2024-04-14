@@ -9,7 +9,6 @@ async function getProductCategory() {
   } catch (error) {
     
   }
-
 }
 
 export default async function Sidebar() {

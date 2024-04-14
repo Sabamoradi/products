@@ -1,7 +1,5 @@
-import ProductItem from "@/components/ProductItem";
-import ProductList from "@/containers/ProductList";
-import { productItem } from "@/types/type";
 
+import ProductList from "@/containers/ProductList";
 
 async function getProductData() {
   try {

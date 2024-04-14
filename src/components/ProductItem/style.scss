@@ -16,6 +16,8 @@
     justify-content: space-between;
     .img_wrapper{
       img{
+        width: 100%;
+        object-fit: cover;
         height: toRem(200);
       }
     }
