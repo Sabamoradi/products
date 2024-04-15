@@ -21,13 +21,13 @@
     .right{
         padding-left: 0;
     }
-    .show-btn{
+    .mobile_menu{
         display: block !important;
+        margin-right: 5px;
     }
     .header_wrapper{
         display: flex;
-        justify-content: space-between;
-        padding: 5px 20px 20px 20px !important;
+        justify-content: flex-end;
         box-shadow: none;
         width: 95% !important;
     }

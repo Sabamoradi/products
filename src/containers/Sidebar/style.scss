@@ -24,7 +24,7 @@
         }
     }
 }
-.show-btn{
+.mobile_menu{
     display: none;
     padding: toRem(20);
     position: fixed;
@@ -34,4 +34,7 @@
     height: toRem(2);
     background-color: $black;
     margin: toRem(2) 0;
+}
+.close-btn{
+    width: 100%;
 }
