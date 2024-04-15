@@ -1,8 +1,7 @@
 @use "src/styles/main.scss" as *;
 
 .header_wrapper{
-    padding: toRem(10) 0;
-    box-shadow: toRem(6) toRem(1) toRem(16) #ccc;
+    box-shadow: toRem(6) toRem(1) toRem(16) $gray-c;
     text-align: left;
     float: right;
     width: 100%;
